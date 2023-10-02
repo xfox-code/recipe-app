@@ -2,7 +2,7 @@ import React from "react";
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <div className="recipe-card" key={recipe.id}>
+    <div className="recipe-card">
       <h2>{recipe.recipeName}</h2>
       <h3>Ingredients</h3>
       <p>{recipe.ingredients}</p>

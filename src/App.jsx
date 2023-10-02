@@ -22,6 +22,7 @@ function App() {
       },
       body: JSON.stringify({ ...newRecipe, id: uuidv4() }),
     });
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -74,7 +75,7 @@ function App() {
       <section>
         <h1>RECIPES</h1>
         {recipesData.map((recipe) => (
-          <RecipeCard recipe={recipe} />
+          <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </section>
     </>

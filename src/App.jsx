@@ -22,6 +22,7 @@ function App() {
       },
       body: JSON.stringify({ ...newRecipe, id: uuidv4() }),
     });
+    window.location.reload();
   };
 
   useEffect(() => {

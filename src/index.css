@@ -8,9 +8,14 @@ h1 {
 }
 
 section {
-  width: 600px;
+  width: 800px;
   margin-left: 20px;
   margin-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .new-recipe {
@@ -53,13 +58,36 @@ button {
   color: black;
 }
 
+.recipes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .recipe-card {
+  width: 340px;
   border: solid 2px;
   border-radius: 20px;
   padding: 1rem;
-  margin-top: 1rem;
 }
 
 p {
   white-space: preserve;
+}
+
+.recipe-paragraph {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.recipe-page-wrapper {
+  width: 600px;
+}
+
+.recipe-page-wrapper h1,
+.recipe-page-wrapper h3 {
+  margin-top: 40px;
 }

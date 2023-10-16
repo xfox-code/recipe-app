@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const Form = () => {
+const Form = (props) => {
   const [recipeName, setRecipeName] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [description, setDescription] = useState("");
@@ -12,7 +12,10 @@ const Form = () => {
       ingredients,
       description,
     };
-    let response = await fetch("http://localhost:3000/recipes", {
+    if (props.isFetchError) {
+      return props.setRecipesDataHandler(newRecipe);
+    }
+    await fetch("http://localhost:3000/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
